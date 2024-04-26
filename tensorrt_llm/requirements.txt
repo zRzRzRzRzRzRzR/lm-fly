@@ -1,0 +1,7 @@
+transformers>4.40.1
+openai>=1.23.6
+fastapi>=0.110.2
+sse_starlette>=2.1.0
+timm>=0.9.16
+uvicorn>=0.29.0
+gradio>=4.28.0
