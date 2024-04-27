@@ -10,12 +10,12 @@ from pydantic import BaseModel, Field
 from sse_starlette.sse import EventSourceResponse
 import argparse
 import torch
-from tensorrt_llm.runtime import ModelRunner, PYTHON_BINDINGS
-from tensorrt_llm.logger import logger
+from tensorrt_llm_study.runtime import ModelRunner, PYTHON_BINDINGS
+from tensorrt_llm_study.logger import logger
 from utils import load_tokenizer, read_model_name, throttle_generator
 
 if PYTHON_BINDINGS:
-    from tensorrt_llm.runtime import ModelRunnerCpp
+    from tensorrt_llm_study.runtime import ModelRunnerCpp
 
 runner = None
 tokenizer = None

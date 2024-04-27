@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from typing import Optional
 from transformers import AutoTokenizer
-from tensorrt_llm.builder import get_engine_version
+from tensorrt_llm_study.builder import get_engine_version
 
 
 def read_model_name(engine_dir: str):

@@ -17,8 +17,7 @@
 wget https://github.com/NVIDIA/TensorRT-LLM/archive/refs/tags/v0.9.0.zip
 ```
 
-构建大模型的TensorRT-LLM 引擎并不是一个容易的事情，以 Llama3
-为例，在[官方教程](https://github.com/NVIDIA/TensorRT-LLM/tree/main/windows/examples/llama)中，您需要自行构建docker，并使用教程的方法转换模型。
+构建大模型的TensorRT-LLM 引擎并不是一个容易的事情，以 Llama3 为例，在[官方教程](https://github.com/NVIDIA/TensorRT-LLM/tree/main/windows/examples/llama)中，您需要自行构建docker，并使用教程的方法转换模型。
 
 **这一步是没有办法跳过的**。
 
@@ -26,7 +25,7 @@ wget https://github.com/NVIDIA/TensorRT-LLM/archive/refs/tags/v0.9.0.zip
 
 您需要安装额外的依赖来支持本章节的所有功能。
 ```sheel
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 ```
 ## 使用 OpenAI 接口
 
@@ -49,9 +48,6 @@ python openai_server/server.py
 1. 目前，示例代码并不支持使用工具调用和 embedding 模型。
 
 ## 使用 WebUI 接口
-1. 请注意，您需要将[webui_infer.py](webui_infer.py) 放置到 `/TensorRT-LLM-0.9.0/examples/llama` 目录下，其中，`TensorRT-LLM-0.9.0` 是您从
-
-2. 我们根据 Llama3 引擎制作了 OpenAI 接口，方便用户使用。您可以在[这里](webui_infer.py)找到相关的代码并运行。
 
 **请注意，如果您有多张显卡，一定需要指定显卡运行。**
 
@@ -60,5 +56,5 @@ CUDA_VISIBLE_DEVICES = 0 python webui_infer.py
 ```
 之后，您可以在gradio页面上进行访问，效果如下:
 
-![TRT](assert/trt_gradio.gif)
+![TRT](assets/trt_gradio.gif)
 

@@ -3,12 +3,12 @@
 import argparse
 import gradio as gr
 import torch
-from tensorrt_llm.runtime import ModelRunner, PYTHON_BINDINGS
-from tensorrt_llm.logger import logger
+from tensorrt_llm_study.runtime import ModelRunner, PYTHON_BINDINGS
+from tensorrt_llm_study.logger import logger
 from utils import load_tokenizer, read_model_name, throttle_generator
 
 if PYTHON_BINDINGS:
-    from tensorrt_llm.runtime import ModelRunnerCpp
+    from tensorrt_llm_study.runtime import ModelRunnerCpp
 
 runner = None
 tokenizer = None
@@ -24,7 +24,6 @@ def parse_arguments():
     parser.add_argument('--use_py_session', default=True, help="Flag to use Python session for inference")
     parser.add_argument('--streaming', default=True, help="Flag to use Python session for inference")
     parser.add_argument('--streaming_interval', type=int, default=5, help="Interval for streaming inference")
-    parser.add_argument('--temperature', type=float, default=1.0, help="Temperature setting for generation")
     parser.add_argument('--num_beams', type=int, default=1, help="Number of beams for beam search")
     parser.add_argument('--medusa_choices', type=str, default=None,
                         help="Medusa choice to use, if not none, will use Medusa decoding."
