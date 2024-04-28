@@ -12,7 +12,7 @@
 ## 安装OpenVINO
 
 本仓库使用的是 `OpenVINO™ 2024.1`
-版本进行实验。确保您按照[官方手册](https://docs.openvino.ai/2024/get-started/install-openvino.html)安装正确的正确的发行版。这里展示了下载界面的截图。
+版本进行实验。确保您按照[官方手册](https://docs.openvino.ai/2024/get-started/install-openvino.html)安装了正确的发行版。这里展示了下载界面的截图。
 
 ![OpenVINO](assets/openvino_download.png)
 
