@@ -12,7 +12,7 @@
 
 ### 安装官方镜像
 
-本仓库使用的是 `TensorRT-LLM-0.9.0` 版本进行实验。确保您安装正确的正确的发行版。
+本仓库使用的是 `TensorRT-LLM-0.9.0` 版本进行实验。确保您安装了正确的发行版。
 ```shell
 wget https://github.com/NVIDIA/TensorRT-LLM/archive/refs/tags/v0.9.0.zip
 ```
@@ -40,7 +40,7 @@ CUDA_VISIBLE_DEVICES = 0 python openai_server/server.py
 您可以运行 [openai_client.py](openai_server/request.py) 来测试服务是否正常。
 
 ```python
-python openai_server/server.py
+python openai_server/request.py
 ```
 
 ### 局限性
