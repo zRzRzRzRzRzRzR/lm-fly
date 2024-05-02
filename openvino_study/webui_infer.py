@@ -15,10 +15,8 @@ global model, tokenizer
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Interactive TensorRT Model Chat Interface")
-    parser.add_argument('--model_path', type=str, default="",
-                        help="Directory of the OpenVINO model")
-    parser.add_argument('--tokenizer_path', type=str, default="",
-                        help="Directory of the tokenizer")
+    parser.add_argument('--model_path', type=str, default="", help="Directory of the OpenVINO model")
+    parser.add_argument('--tokenizer_path', type=str, default="",help="Directory of the tokenizer")
     parser.add_argument('--log_level', type=str, default='info', help="Logging level")
     parser.add_argument('--use_py_session', default=True, help="Flag to use Python session for inference")
     parser.add_argument('--device', default='CPU', type=str, help='Device for inference')
@@ -156,8 +154,11 @@ def predict(history, max_length, top_p, temperature):
 
 if __name__ == "__main__":
     args = parse_arguments()
-    model = OVCHATModel.from_pretrained(args.model_path)
-    tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_path if args.tokenizer_path else args.model_path)
+    model = OVCHATModel.from_pretrained(
+        model_id=args.model_path,
+        device=args.device,
+    )
+    tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_dir)
 
     with gr.Blocks() as demo:
         gr.HTML("""<h1 align="center">OpenVINO infer Gradio</h1>""")

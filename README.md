@@ -1,6 +1,5 @@
 # lm-fly
 
-
 <div align="center">
 <img src=assets/im-fly.jpg width="20%"/>
 </div>
@@ -19,12 +18,12 @@
 2. openai接口：提供openai接口，方便用户通过代码进行加速任务的提交和管理。
 3. 压力测试：提供压力测试脚本，方便用户进行加速任务的压力测试。
 
-
 ## 项目更新
 
 - 🔥 ```2024-4-27```: 添加了TensorRT-LLM和OpenVINO的基础支持。
 
 ## 支持 & 学习的加速框架和硬件
+
 我们展示了学习路线：
 
 ![展示](assets/outline.png)
@@ -38,8 +37,8 @@
 | LLM加速框架      | 是否支持 | gradio UI | openai接口 | 压力测试 | 微调 | 厂家          |
 |--------------|------|-----------|----------|------|----|-------------|
 | TensorrT-LLM | ✓    | ✓         | ✓        | ✓    | /  | NVIDIA      |
-| OpenVINO     | ✓    | ✓         | ✗        | ✗    | /  | Intel       |
-| VLLM         | ✗    | ✗         | ✗        | ✗    | /  | lmsys       |
+| OpenVINO     | ✓    | ✓         | ✓        | ✓    | /  | Intel       |
+| VLLM         | ✓    | ✗         | ✓        | ✓    | /  | lmsys       |
 | MLX          | ✗    | ✗         | ✗        | ✗    | ✓  | Apple       |
 | TGI          | ✗    | ✗         | ✗        | ✗    | ✗  | HuggingFace |
 
